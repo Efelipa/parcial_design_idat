@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini&display=swap');
+
+
+:root {
+  --main-color: #C5EBC3;
+  --secondary-color: #272932;
+  --green: #4B7F52;
+  --black: #000;
+  --white: #fff;
+
+  /* Fuente */
+  --font-main: "Jaini", system-ui;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--font-main);
+}
+/* Utils */
+.container {
+  max-width: 80%;
+}
+
+.btn {
+  background: var(--white);
+  padding: .6rem .5rem;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.flat-font {
+  font-family: 'Arial', sans-serif;
+  font-weight: 100;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: .8rem 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+.links li > a {
+  text-decoration: none;
+  color: var(--white);  
+  font-size: 1.1rem;
+}
+.links li > a:hover {
+  opacity: .8;
+}
+
+.btn-main {
+  background: var(--green);
+  color: var(--white);
+  text-decoration: none;
+}
+.btn-main:hover {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+  opacity: .9;
+}
+
+/* Main */
+
+#main-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+.first-side {
+  display: grid;
+  place-items: center;
+}
+.second-side {
+  background: url('./utils/img/main-photo.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.title h1, .title h2 {
+  margin: 0;
+  color: var(--secondary-color);
+}
+.title h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+#main-image {
+  width: 100%;
+}
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  opacity: .9;
+}
+.buttons .btn-main, .btn-secondary {
+  padding: .5rem 1.5rem;
+}

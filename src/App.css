@@ -7,6 +7,8 @@
   --green: #4B7F52;
   --black: #000;
   --white: #fff;
+  --red: #b40e22;
+
 
   /* Fuente */
   --font-main: "Jaini", system-ui;
@@ -20,6 +22,11 @@ body {
 .container {
   max-width: 80%;
 }
+
+w-100 {
+  width: 100%;
+}
+
 
 .btn {
   background: var(--white);
@@ -74,10 +81,21 @@ body {
   border: 2px solid var(--green);
   opacity: .9;
 }
+.btn-danger {
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+}
+.btn-danger:hover {
+  background: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+  opacity: .9;
+}
 
 /* Main */
 
-#main-section {
+#main-section, #login-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
@@ -128,4 +146,194 @@ body {
 }
 .buttons .btn-main, .btn-secondary {
   padding: .5rem 1.5rem;
+}
+/* Login */
+
+#login-section {
+  background: var(--white);
+}
+.login-image {
+  background: url('./utils/img/login-image.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.login-content {
+  background-color: #FDFBFF; /* El fondo ligeramente rosado/blanco de la foto */
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-family: var(--font-main);
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  font-family: var(--font-main);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 4px; /* Un redondeado muy sutil */
+  background-color: #D9D9D9; /* El gris característico de tu diseño */
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: #888; /* Color del texto que escribes */
+}
+
+/* Estilo para el placeholder */
+.input-group input::placeholder {
+  color: #888;
+  opacity: 0.7;
+}
+
+.btn-submit {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #4B7F52; /* El verde de tu paleta */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #3e6944; /* Un verde un poco más oscuro al pasar el mouse */
+}
+
+/* Dashboard */
+.dashboard-section {
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.dashboard-title-container {
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-main);
+  color: var(--secondary-color);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--green);
+  display: block;
+}
+
+.stat-desc {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.table-container {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+}
+
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-table thead tr {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.dashboard-table th {
+  padding: 1rem;
+  color: var(--secondary-color);
+}
+
+.dashboard-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-table td {
+  padding: 1rem;
+}
+
+.status-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-confirmed {
+  background-color: #e6f4ea;
+  color: var(--green);
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #f57f17;
 }

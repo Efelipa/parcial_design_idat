@@ -6,6 +6,7 @@ import Inicio from './pages/Inicio.jsx';
 import Carta from './pages/Carta.jsx';
 import Nosotros from './pages/Nosotros.jsx';
 import Login from './pages/Login.jsx';
+import Dashboard from './pages/Dashboard.jsx';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Route path='/carta' element={<Carta/>}></Route>
         <Route path='/nosotros' element={<Nosotros/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
       </Routes>
     </Router>
   )

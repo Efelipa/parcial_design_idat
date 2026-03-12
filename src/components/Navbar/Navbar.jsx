@@ -17,8 +17,11 @@ const Navbar = () => {
                         <Link to='/nosotros'>Nosotros</Link>
                     </li>
                 </ul>
-                {location.pathname !== '/login' && (
+                {location.pathname !== '/login' && location.pathname !== '/dashboard' && (
                     <Link to='/login' className='btn | btn-main'>Iniciar Sesión</Link>
+                )}
+                {location.pathname === '/dashboard' && (
+                    <Link to='/' className='btn | btn-danger'>Cerrar Sesión</Link>
                 )}
             </div>
         </nav>

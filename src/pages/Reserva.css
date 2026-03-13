@@ -1,0 +1,132 @@
+.reserva-page {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.reserva-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.reserva-header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.reserva-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.reserva-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.reserva-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.reserva-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.reserva-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+    font-family: var(--font-main);
+}
+
+.reserva-form input,
+.reserva-form select,
+.reserva-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background-color: #fcfcfc;
+    font-family: 'Arial', sans-serif; /* Fuente legible para inputs */
+}
+
+.reserva-form input:focus,
+.reserva-form select:focus,
+.reserva-form textarea:focus {
+    border-color: #F2C94C;
+    outline: none;
+    background-color: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.btn-reserva {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4B7F52; /* Color verde del tema */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-reserva:hover {
+    background-color: #3e6944;
+}
+
+/* Info lateral */
+.reserva-info {
+    background: #272932; /* Color secundario del tema */
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.reserva-info h3 {
+    color: #F2C94C;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.reserva-info ul {
+    padding-left: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.reserva-info li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .reserva-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

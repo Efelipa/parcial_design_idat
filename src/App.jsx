@@ -3,10 +3,11 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Inicio from './pages/Inicio.jsx';
-import Carta from './pages/Carta.jsx';
+import CartaMain from './components/Main/CartaMain.jsx';
 import Nosotros from './pages/Nosotros.jsx';
 import Login from './pages/Login.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Reserva from './pages/Reserva.jsx';
 
 function App() {
   
@@ -15,10 +16,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Inicio/>}></Route>
-        <Route path='/carta' element={<Carta/>}></Route>
+        <Route path='/carta' element={<CartaMain/>}></Route>
         <Route path='/nosotros' element={<Nosotros/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/reserva' element={<Reserva/>}></Route>
       </Routes>
     </Router>
   )
